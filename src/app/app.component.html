@@ -7,3 +7,8 @@
 <p>Template Error Component:</p>
 <ng-template #tpl>Error Template</ng-template>
 <app-error [error]="tpl"></app-error>
+
+<p>Inner Template Error Component:</p>
+<app-error>
+  <ng-template>Inner Error Template</ng-template>
+</app-error>

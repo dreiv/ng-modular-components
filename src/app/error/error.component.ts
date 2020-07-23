@@ -1,4 +1,4 @@
-import { Component, Input, TemplateRef } from '@angular/core';
+import { Component, Input, TemplateRef, ContentChild } from '@angular/core';
 
 @Component({
   selector: 'app-error',
@@ -6,9 +6,6 @@ import { Component, Input, TemplateRef } from '@angular/core';
   styleUrls: ['./error.component.scss']
 })
 export class ErrorComponent {
-  @Input() error: any = 'There was an error';
-
-  get isTemplate(): boolean {
-    return this.error instanceof TemplateRef;
-  }
+  @Input() error: string | TemplateRef<any> = 'There was an error';
+  @ContentChild(TemplateRef) tplRef!: TemplateRef<any>;
 }

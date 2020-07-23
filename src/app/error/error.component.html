@@ -1,6 +1,3 @@
-<ng-template #templateString>
-  <p class="error">{{ error }}</p>
-</ng-template>
-
-<ng-template [ngTemplateOutlet]="error" *ngIf="isTemplate; else templateString">
+<ng-template [templateOrString]="tplRef || error">
+  <p>{{ error }}</p>
 </ng-template>
