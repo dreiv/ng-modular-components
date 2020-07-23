@@ -1,1 +1,9 @@
-<h1>hello world!</h1>
+<p>Default Error Component:</p>
+<app-error></app-error>
+
+<p>Custom Error Component:</p>
+<app-error error="Custom"></app-error>
+
+<p>Template Error Component:</p>
+<ng-template #tpl>Error Template</ng-template>
+<app-error [error]="tpl"></app-error>
